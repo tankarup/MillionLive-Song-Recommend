@@ -3101,8 +3101,8 @@ const songs = [
         "ミリシタ": "4",
         "score": {
             "真崎エリカ": 1,
-            "西添健": 2,
             "伊吹翼": 1,
+            "西添健": 2,
             "桑原聖": 2
         },
         "scores": [
@@ -3111,12 +3111,12 @@ const songs = [
                 "value": 1
             },
             {
-                "artist": "西添健",
-                "value": 2
-            },
-            {
                 "artist": "伊吹翼",
                 "value": 1
+            },
+            {
+                "artist": "西添健",
+                "value": 2
             },
             {
                 "artist": "桑原聖",
@@ -3279,8 +3279,8 @@ const songs = [
         "score": {
             "唐沢美帆": 1,
             "増谷賢": 1,
-            "桑原聖": 1,
             "北上麗花": 1,
+            "桑原聖": 1,
             "酒井拓也 ": 1
         },
         "scores": [
@@ -3293,11 +3293,11 @@ const songs = [
                 "value": 1
             },
             {
-                "artist": "桑原聖",
+                "artist": "北上麗花",
                 "value": 1
             },
             {
-                "artist": "北上麗花",
+                "artist": "桑原聖",
                 "value": 1
             },
             {
@@ -3439,25 +3439,16 @@ const songs = [
         "": "Fa",
         "ミリシタ": "3",
         "score": {
-            "Ayaka Miyake": 2,
-            "K's": 1,
             "如月千早": 1,
             "エミリースチュアート": 1,
             "ジュリア": 1,
             "徳川まつり": 1,
             "豊川風花": 1,
-            "TAKAROT": 2,
-            "K's、TAKAROT": 1
+            "Ayaka Miyake": 2,
+            "TAKAROT": 3,
+            "K's": 2
         },
         "scores": [
-            {
-                "artist": "Ayaka Miyake",
-                "value": 2
-            },
-            {
-                "artist": "K's",
-                "value": 1
-            },
             {
                 "artist": "如月千早",
                 "value": 1
@@ -3479,12 +3470,16 @@ const songs = [
                 "value": 1
             },
             {
-                "artist": "TAKAROT",
+                "artist": "Ayaka Miyake",
                 "value": 2
             },
             {
-                "artist": "K's、TAKAROT",
-                "value": 1
+                "artist": "TAKAROT",
+                "value": 3
+            },
+            {
+                "artist": "K's",
+                "value": 2
             }
         ]
     },
@@ -6802,20 +6797,16 @@ const songs = [
         "ミリシタ": "0",
         "score": {
             "ZAQ": 1,
-            "BERABOW": 1,
             "Shinnosuke": 1,
             "大神環": 1,
             "野々原茜": 1,
             "箱崎星梨花": 1,
+            "BERABOW": 1,
             "SigN": 1
         },
         "scores": [
             {
                 "artist": "ZAQ",
-                "value": 1
-            },
-            {
-                "artist": "BERABOW",
                 "value": 1
             },
             {
@@ -6832,6 +6823,10 @@ const songs = [
             },
             {
                 "artist": "箱崎星梨花",
+                "value": 1
+            },
+            {
+                "artist": "BERABOW",
                 "value": 1
             },
             {
@@ -7203,19 +7198,15 @@ const songs = [
         "": "Fa",
         "ミリシタ": "3",
         "score": {
-            "青木朋子": 1,
             "伊藤賢": 2,
             "天空橋朋花": 1,
             "所恵美": 1,
             "二階堂千鶴": 1,
             "百瀬莉緒": 1,
+            "青木朋子": 1,
             "松井洋平": 1
         },
         "scores": [
-            {
-                "artist": "青木朋子",
-                "value": 1
-            },
             {
                 "artist": "伊藤賢",
                 "value": 2
@@ -7234,6 +7225,10 @@ const songs = [
             },
             {
                 "artist": "百瀬莉緒",
+                "value": 1
+            },
+            {
+                "artist": "青木朋子",
                 "value": 1
             },
             {
@@ -7261,20 +7256,16 @@ const songs = [
         "": "未",
         "ミリシタ": "0",
         "score": {
-            "青木朋子": 1,
             "shilo": 1,
             "佐野宏晃": 1,
             "天空橋朋花": 1,
             "所恵美": 1,
             "二階堂千鶴": 1,
             "百瀬莉緒": 1,
+            "青木朋子": 1,
             "久澄春人": 1
         },
         "scores": [
-            {
-                "artist": "青木朋子",
-                "value": 1
-            },
             {
                 "artist": "shilo",
                 "value": 1
@@ -7297,6 +7288,10 @@ const songs = [
             },
             {
                 "artist": "百瀬莉緒",
+                "value": 1
+            },
+            {
+                "artist": "青木朋子",
                 "value": 1
             },
             {
@@ -8944,8 +8939,8 @@ const songs = [
         "score": {
             "松井洋平": 1,
             "石谷桂亮": 2,
-            "遠藤直弥": 1,
-            "高山紗代子": 1
+            "高山紗代子": 1,
+            "遠藤直弥": 1
         },
         "scores": [
             {
@@ -8957,11 +8952,11 @@ const songs = [
                 "value": 2
             },
             {
-                "artist": "遠藤直弥",
+                "artist": "高山紗代子",
                 "value": 1
             },
             {
-                "artist": "高山紗代子",
+                "artist": "遠藤直弥",
                 "value": 1
             }
         ]
@@ -10771,19 +10766,15 @@ const songs = [
         "": "An",
         "ミリシタ": "4",
         "score": {
-            "早川博隆": 2,
             "関根佑樹": 2,
             "篠宮可憐": 1,
             "箱崎星梨花": 1,
             "木下ひなた": 1,
             "宮尾美也": 1,
+            "早川博隆": 2,
             "中原徹也": 1
         },
         "scores": [
-            {
-                "artist": "早川博隆",
-                "value": 2
-            },
             {
                 "artist": "関根佑樹",
                 "value": 2
@@ -10803,6 +10794,10 @@ const songs = [
             {
                 "artist": "宮尾美也",
                 "value": 1
+            },
+            {
+                "artist": "早川博隆",
+                "value": 2
             },
             {
                 "artist": "中原徹也",
