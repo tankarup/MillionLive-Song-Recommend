@@ -8,7 +8,7 @@ html +="<thead><tr><th></th><th>曲名</th><th>作詞</th><th>作曲</th><th>編
 html += '<tbody class="small">';
 for (let i=0; i<songs.length; i++){
     const song = songs[i];
-    if (song["ミリシタ"]=="未") continue;
+    if (song["ミリシタ"]=="0") continue;
     let idols = "";
     if (song.Idol1) idols += song.Idol1;
     if (song.Idol2) idols += ", " + song.Idol2;
@@ -116,7 +116,7 @@ function updateRecommends(){
 
     for (let i = 0; i < songs.length; i++){
         const song = songs[i];
-        if (song["ミリシタ"]=="未"){
+        if (song["ミリシタ"]=="0"){
             let total_score = 0;
             
             for (let j = 0; j<song.scores.length; j++){
