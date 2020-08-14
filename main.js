@@ -3,7 +3,7 @@ let your_scores = [];
 
 let song_element = document.getElementById("songs");
 
-let html = '<table class="table table-striped table-sm overflow-auto table-responsive" style="height:400px;">';
+let html = '<table class="songs_table table table-striped table-sm overflow-auto table-responsive">';
 html +="<thead><tr><th></th><th>曲名</th><th>作詞</th><th>作曲</th><th>編曲</th><th>歌手</th></tr></thead>";
 html += '<tbody class="small">';
 for (let i=0; i<songs.length; i++){
@@ -145,8 +145,8 @@ function updateRecommends(){
 
     let song_element = document.getElementById("recommends");
 
-    let html = '<table class="table table-striped table-sm overflow-auto table-responsive" style="height:400px;">';
-    html += "<thead><tr><th>ポイント</th><th>曲名(試聴)</th><th>作詞</th><th>作曲</th><th>編曲</th><th>歌手</th></tr></thead>";
+    let html = '<table class="songs_table table table-striped table-sm overflow-auto table-responsive">';
+    html += "<thead><tr><th>Pt</th><th>曲名(試聴)</th><th>作詞</th><th>作曲</th><th>編曲</th><th>歌手</th></tr></thead>";
     html += '<tbody class="small">';
     for (let i = 0; i < recommended_songs.length; i++) {
         const song = recommended_songs[i];
@@ -171,3 +171,8 @@ $('input[name=checkbox]').change(function () {
     updateGraph();
     updateRecommends();
 });
+$(window).resize(function () {
+    hsize = Math.round(($(window).height()-80)/2-50);
+    $(".songs_table").css("height", hsize + "px");
+  });
+$(window).resize();
