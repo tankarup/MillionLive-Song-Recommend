@@ -1,14 +1,15 @@
 
 let your_scores = [];
 
-let song_element = document.getElementById("songs");
 
-let html = '<table class="songs_table table table-striped table-sm overflow-auto table-responsive">';
-html +="<thead><tr><th></th><th>曲名</th><th>作詞</th><th>作曲</th><th>編曲</th><th>歌手</th></tr></thead>";
-html += '<tbody class="small">';
+let table_head = '<table class="songs_table table table-striped table-sm overflow-auto table-responsive">';
+table_head +="<thead><tr><th></th><th>曲名(試聴)</th><th>作詞</th><th>作曲</th><th>編曲</th><th>歌手</th></tr></thead>";
+table_head += '<tbody class="small">';
+
+let table_body_implemented = '';
+let table_body_unimplemented = '';
 for (let i=0; i<songs.length; i++){
     const song = songs[i];
-    if (song["ミリシタ"]=="0") continue;
     let idols = "";
     if (song.Idol1) idols += song.Idol1;
     if (song.Idol2) idols += ", " + song.Idol2;
@@ -16,12 +17,16 @@ for (let i=0; i<songs.length; i++){
     if (song.Idol4) idols += ", " + song.Idol4;
     if (song.Idol5) idols += ", " + song.Idol5;
 
-    html += `<tr><td><input type="checkbox" name="checkbox" value="${song["ID"]}"></td><td>${song["Title"]}</td><td>${song["作詞"]}</td><td>${song["作曲"]}</td><td>${song["編曲"]}</td><td>${idols}</td></tr>`;
+    if (song["ミリシタ"]=="0"){
+        table_body_unimplemented += `<tr><td></td><td><a target="_blank" href="${song["試聴"]}">${song["Title"]}</a></td><td>${song["作詞"]}</td><td>${song["作曲"]}</td><td>${song["編曲"]}</td><td>${idols}</td></tr>`;
+    } else {
+        table_body_implemented += `<tr><td><input type="checkbox" name="checkbox" value="${song["ID"]}"></td><td><a target="_blank" href="${song["試聴"]}">${song["Title"]}</a></td><td>${song["作詞"]}</td><td>${song["作曲"]}</td><td>${song["編曲"]}</td><td>${idols}</td></tr>`;
+    }
 };
-html += "</tbody>";
-html +="</table>";
 
-song_element.innerHTML = html;
+
+document.getElementById("songs").innerHTML = table_head + table_body_implemented + '</tbody></table>';
+document.getElementById("recommends").innerHTML = table_head + table_body_unimplemented + '</tbody></table>';
 /*
 window.addEventListener('DOMContentLoaded', function(){
     $.get("scoredsongs.json", (data) => {
@@ -158,7 +163,7 @@ function updateRecommends(){
         if (song.Idol4) idols += ", " + song.Idol4;
         if (song.Idol5) idols += ", " + song.Idol5;
 
-        html += `<tr><td>${song.scores.total_score}</td><td><a href="${song["試聴"]}">${song["Title"]}</a></td><td>${song["作詞"]}</td><td>${song["作曲"]}</td><td>${song["編曲"]}</td><td>${idols}</td></tr>`;
+        html += `<tr><td>${song.scores.total_score}</td><td><a target="_blank" href="${song["試聴"]}">${song["Title"]}</a></td><td>${song["作詞"]}</td><td>${song["作曲"]}</td><td>${song["編曲"]}</td><td>${idols}</td></tr>`;
     };
     html += "</tbody>";
     html += "</table>";
